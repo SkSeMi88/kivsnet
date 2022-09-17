@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="header"></div>
+    <div class="wrapper"></div>
+    <div class="footer"></div>
 </body>
 </html>
