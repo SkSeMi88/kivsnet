@@ -17,9 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/users/create', function () {
+    return view('.users.create');
+});
 
 Route::post('/users/create', function () {
-    return view('users.create');
+    dump($_REQUEST);
+    var_dump($_REQUEST);
+    return view('.users.create');
+});
+
+
+Route::get('/users/list', function () {
+    return view('.users.list');
+});
+
+Route::get('/users/card', function () {
+    return view('.users.card');
+});
+
+Route::get('/cui', function () {
+    return view('.mkutsui.mkutsui');
 });
 
 
