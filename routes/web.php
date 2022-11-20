@@ -24,6 +24,67 @@ Route::get('/users/create', function () {
 Route::post('/users/create', function () {
     dump($_REQUEST);
     var_dump($_REQUEST);
+    foreach($_REQUEST AS $k=>$v)
+    {
+        echo "<hr>$k=>$v";
+    }
+
+    $translit   = [
+        "а" => "a",
+        "б" => "a",
+        "в" => "a",
+        "г" => "a",
+        "д" => "a",
+        "е" => "a",
+        "ё" => "a",
+        "ж" => "xh",
+        "з" => "z",
+        "и" => "i",
+        "й" => "y",
+        "к" => "k",
+        "л" => "l",
+        "м" => "m",
+        "н" => "n",
+        "о" => "p",
+        "п" => "p",
+        "р" => "r",
+        "с" => "s",
+        "т" => "t",
+        "у" => "u",
+        "ф" => "ph",
+        "х" => "h",
+        "ц" => "ts",
+        "щ" => "a",
+        "щ" => "a",
+        "ъ" => "a",
+        "ы" => "y",
+        "ь" => "_",
+        "э" => "e",
+        "ю" => "yu",
+        "я" => "ya",
+    ];
+
+    echo "<br>";
+    $email_ru = implode(".",[strtolower($_REQUEST["name"]), strtolower($_REQUEST["fname"])]);
+    // print_r($email_ru);
+    // echo"<br>".strlen($email_ru);
+    // echo"<br>".$email_ru[1];
+
+    $email  = "";
+    for($i=0; $i<strlen($email_ru); $i++)
+    {
+        // echo"<br>$email_ru[$i]";
+        if (in_array($email_ru[$i], array_keys($translit)))
+        {
+            $email  .= $translit[$email_ru[$i]];
+            continue;
+        }
+        $email  .= $email_ru[$i];
+        echo $email_ru[$i];
+    }
+    echo "<hr>".$email;
+
+
     return view('.users.create');
 });
 

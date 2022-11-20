@@ -209,7 +209,7 @@
                 </label>
             <div>
             <input type="button" name="login-btn" id="login-btn" value="Х" >
-            <input type="text" name="name" id="name" value="" placeholder="Фамилия" required  style="width: 50%">
+            <input type="text" name="fname" id="fname" value="" placeholder="Фамилия" required  style="width: 50%">
 
             <br>
             <br>
@@ -232,7 +232,7 @@
             <input type="button" name="login-btn" id="login-btn" value="Х" >
             <input type="text" name="sname" id="sfname" value="" placeholder="Отчество" required  style="width: 50%">
 
-            <br>
+            {{-- <br>
             <br>
 
             <input type="button" name="login-btn" id="login-btn" value="Получить логин" >
@@ -242,10 +242,12 @@
             <br>
 
             <input type="button" name="email-btn" id="email-btn" value="Получить почту" >
-            <input type="text" name="email" id="email" value="" placeholder="Почта" style="width: 50%">
+            <input type="text" name="email" id="email" value="" placeholder="Почта" style="width: 50%"> --}}
 
-            <input type="submit" name="create-user" value="Создать пользователя">
-            <input type="reset" name="create-user" value="Сбросить">
+            <div>
+                <input type="submit" name="create-user" value="Создать пользователя">
+                <input type="reset" name="create-user" value="Сбросить">
+            </div>
         </form>
 
     </body>
