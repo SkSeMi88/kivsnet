@@ -18,7 +18,26 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+
+            .span_mesto {
+                width:  100px;
+            }
+
+            div .span_mesto {
+                display:    flex;
+                width:  100px;
+                /* background: green; */
+            }
+
+            .div-label {
+                margin-top: 5px;
+                font-weight: bold;
+            }
             </style>
+
+        <script src="/js/kivsnet.js">
+        </script>
+
     </head>
     <body>
 
@@ -31,42 +50,49 @@
             </label>
 
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Выберите организацию
                 </label>
             </div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
-            <input list="company-list"  name="company" id="company" value="" style="width:50%" required>
+            <div name="company_block" id="company_block">
 
-            <datalist id="company-list" style="width:50%">
-                <option>Администрация Петрозаводского городского округа</option>
-                <option>МУ "ХЭС"</option>
-                <option>МКУ "ЦУИ"</option>
-                <option>МКУ "ЦБО"</option>
-                <option>МКУ "ЖКХ"</option>
-                <option>МКУ "МАП"</option>
-                <option>МКУ "УКС"</option>
-                <option>МКУ "ЕДДС"</option>
-                <option>МКУ "Ритуал"</option>
-                <option>МКУ "Петроснаб"</option>
-                <option>МКУ "Служба заказчика"</option>
-            </datalist>
+                <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
+                <input list="company-list"  name="company" id="company" value="" style="width:50%" required>
 
-            <br>
-            <br>
+                <datalist id="company-list" style="width:50%">
+                    <option>Администрация Петрозаводского городского округа</option>
+                    <option>МУ "ХЭС"</option>
+                    <option>МКУ "ЦУИ"</option>
+                    <option>МКУ "ЦБО"</option>
+                    <option>МКУ "ЖКХ"</option>
+                    <option>МКУ "МАП"</option>
+                    <option>МКУ "УКС"</option>
+                    <option>МКУ "ЕДДС"</option>
+                    <option>МКУ "Ритуал"</option>
+                    <option>МКУ "Петроснаб"</option>
+                    <option>МКУ "Служба заказчика"</option>
+                    <option>МКУ "ЦИБС"</option>
 
-            <div>
+                    {{-- АПГО, МУ "ХЭС", МКУ "ЦУИ", МКУ "ЕДДС", МКУ "Ритуал", МКУ "Петроснаб", МКУ "Служба заказчика", МКУ "МАП", МКУ "ЦБО", МКУ "УКС", МКУ "ЖКХ", Бибилиотека --}}
+
+                </datalist>
+
+            </div>
+            {{-- <br>
+            <br> --}}
+
+            <div class="div-label">
                 <label>
                     Выберите комитет
                 </label>
             </div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input list="comite-list"  name="comite" id="comite" value="" style="width:50%"  required>
 
             <datalist id="comite-list" style="width:50%">
@@ -74,68 +100,160 @@
                 <option>Нет</option>
                 <option>Аппарат</option>
                 <option>Комитет финансов</option>
+                <option>Комитет Жилищно-комунального хозяйства</option>
                 <option>Комитет градостроительства и землепользования</option>
                 <option>Комитет социального развития</option>
                 <option>Комитет экономического развития</option>
 
             </datalist>
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Выберите управление
                 </label>
             </div>
 
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input list="management-list"  name="management" id="management" value="" style="width:50%"  required>
 
             <datalist id="management-list" style="width:50%">
 
                 <option>Нет</option>
                 <option>Информационно аналитическое управление</option>
-                <option>Управдение культуры</option>
+                <option>Управление культуры</option>
                 <option>Управление образования</option>
                 <option>Управление ЖКХ</option>
                 <option>Управление дорожного хозяйства</option>
-                <option>Комитет градостроительства и землепользования</option>
-                <option>Комитет социального развития</option>
-                <option>Комитет экономического развития</option>
-
             </datalist>
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Выберите отдел
                 </label>
             </div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input list="department-list"  name="department" id="department" value="" style="width:50%"  required>
 
             <datalist id="department-list" style="width:50%">
 
                 <option>Нет</option>
+                <option>Пресс центр</option>
                 <option>Финансовый отдел</option>
                 <option>Отдел доходов бюджета</option>
                 <option>Отдел по претензионой исковой работе</option>
-                <option>Управление дорожного хозяйства</option>
-                <option>Комитет градостроительства и землепользования</option>
-                <option>Комитет социального развития</option>
-                <option>Комитет экономического развития</option>
-
+                <option>Отдел технологического и программного обеспечения</option>
             </datalist>
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
+                <div>
+                    <input type="checkbox" id="fact_flag" name="fact_flag" onchange="testjs(this);" value="1">
+                    <span>
+                        Совпадает с фактическим местом работы
+                    </span>
 
-            <div>
+                    <div>
+                        <div class="div-label">
+                            <label>
+                                Организация
+                            </label>
+                        </div>
+
+                        <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
+                        <input list="company-list"  name="company_fact" id="company_fact" value="" style="width:50%" required>
+
+                        <datalist id="company-list" style="width:50%">
+                            <option>Администрация Петрозаводского городского округа</option>
+                            <option>МУ "ХЭС"</option>
+                            <option>МКУ "ЦУИ"</option>
+                            <option>МКУ "ЦБО"</option>
+                            <option>МКУ "ЖКХ"</option>
+                            <option>МКУ "МАП"</option>
+                            <option>МКУ "УКС"</option>
+                            <option>МКУ "ЕДДС"</option>
+                            <option>МКУ "Ритуал"</option>
+                            <option>МКУ "Петроснаб"</option>
+                            <option>МКУ "Служба заказчика"</option>
+                        </datalist>
+
+                        {{-- <br> --}}
+
+                        <div class="div-label">
+                            <label>
+                                Комитет
+                            </label>
+                        </div>
+
+                        <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
+                        <input list="comite-list"  name="comite_fact" id="comite_fact" value="" style="width:50%"  required>
+
+                        <datalist id="comite-list" style="width:50%">
+
+                            <option>Нет</option>
+                            <option>Аппарат</option>
+                            <option>Комитет финансов</option>
+                            <option>Комитет градостроительства и землепользования</option>
+                            <option>Комитет социального развития</option>
+                            <option>Комитет экономического развития</option>
+
+                        </datalist>
+
+                        {{-- <br> --}}
+
+                        <div class="div-label">
+                            <label>
+                                Управление
+                            </label>
+                        </div>
+
+
+                        <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
+                        <input list="management-list"  name="management_fact" id="management_fact" value="" style="width:50%"  required>
+
+                        <datalist id="management-list" style="width:50%">
+
+                            <option>Нет</option>
+                            <option>Информационно аналитическое управление</option>
+                            <option>Управление культуры</option>
+                            <option>Управление образования</option>
+                            <option>Управление ЖКХ</option>
+                            <option>Управление дорожного хозяйства</option>
+                        </datalist>
+
+                        <br>
+
+                        <div class="div-label">
+                            <label>
+                                Отдел
+                            </label>
+                        </div>
+
+                        <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
+                        <input list="department-list"  name="department_fact" id="department_fact" value="" style="width:50%"  required>
+
+                        <datalist id="department-list" style="width:50%">
+
+                            <option>Нет</option>
+                            <option>Финансовый отдел</option>
+                            <option>Отдел доходов бюджета</option>
+                            <option>Отдел по претензионой исковой работе</option>
+                            <option>Отдел технологического и программного обеспечения</option>
+                        </datalist>
+
+                    </div>
+                </div>
+            {{-- <br>
+            <br> --}}
+
+            <div class="div-label">
                 <label>
                     Выберите адрес
                 </label>
@@ -145,16 +263,15 @@
             <input list="adr-list"  name="adr" id="adr" value="" style="width:50%"  required>
 
             <datalist id="adr-list" style="width:50%">
-
                 <option>пр. Ленина, дом 2</option>
                 <option>пр. Октябрьский, дом 5</option>
                 <option>ул. Куйбышева, дом 10</option>
             </datalist>
-
+{{--
             <br>
-            <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Введите должность (полностью)
                 </label>
@@ -163,22 +280,22 @@
             <input type="button" name="login-btn" id="login-btn" value="Х" >
             <input type="text" name="position" id="position" value="" placeholder="Должность" required class="position-text" style="width: 50%">
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Введите номер кабинета (полностью)
                 </label>
             <div>
 
             <input type="button" name="login-btn" id="login-btn" value="Х" >
-            <input type="text" name="position" id="position" value="" placeholder="Введите номер кабинета" required class="position-text" style="width: 50%">
+            <input type="text" name="kab-number" id="kab-number" value="" placeholder="Введите номер кабинета" required class="position-text" style="width: 50%">
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Введите номер компьютера (полностью)
                 </label>
@@ -187,10 +304,10 @@
             <input type="button" name="login-btn" id="login-btn" value="Х" >
             <input type="text" name="pc-number" id="pc-number" value="" placeholder="Введите номер кабинета" required class="pc-number-text" style="width: 50%">
 
-            <br>
-            <br>
+            {{-- <br>
+            <br> --}}
 
-            <div>
+            <div class="div-label">
                 <label>
                     Введите номер телефона (полностью)
                 </label>
@@ -199,11 +316,10 @@
             <input type="button" name="login-btn" id="login-btn" value="Х" >
             <input type="text" name="phone" id="phone" value="" placeholder="Введите номер телефона" required class="phone-text" style="width: 50%">
 
+            {{-- <br>
+            <br> --}}
 
-
-            <br>
-            <br>
-            <div>
+            <div class="div-label">
                 <label>
                     Введите фамилию (полностью)
                 </label>
@@ -211,9 +327,9 @@
             <input type="button" name="login-btn" id="login-btn" value="Х" >
             <input type="text" name="fname" id="fname" value="" placeholder="Фамилия" required  style="width: 50%">
 
-            <br>
-            <br>
-            <div>
+            {{-- <br>
+            <br> --}}
+            <div class="div-label">
                 <label>
                     Введите имя (полностью)
                 </label>
@@ -222,9 +338,9 @@
             <input type="text" name="name" id="name" value="" placeholder="Имя" required  style="width: 50%">
 
 
-            <br>
-            <br>
-            <div>
+            {{-- <br>
+            <br> --}}
+            <div class="div-label">
                 <label>
                     Введите Отчетство (полностью)
                 </label>

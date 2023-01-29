@@ -101,5 +101,13 @@ Route::get('/cui', function () {
     return view('.mkutsui.mkutsui');
 });
 
+Route::get('/skill', function () {
+    return view('.skill.index');
+});
+
+Route::get('/test', function () {
+    return view('.users.test');
+});
+
 
 
